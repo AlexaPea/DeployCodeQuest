@@ -15,7 +15,7 @@ const DeletePostModal = (props) => {
     const deleteUserFunction = () => {
 
         console.log("This is a post");
-        Axios.delete('http://localhost:5000/api/deletePost/' + props.id)
+        Axios.delete('/api/deletePost/' + props.id)
             .then(res => {
                 // console.log("user has been removed from flagged list");
                 closeModal();

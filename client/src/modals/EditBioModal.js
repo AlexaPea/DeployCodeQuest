@@ -25,7 +25,7 @@ const EditBioModal = (props) => {
         let payload = editBio;
         console.log(payload);
 
-        Axios.patch('http://localhost:5000/api/updatebio/' + props.id, payload)
+        Axios.patch('/api/updatebio/' + props.id, payload)
         .then((res)=> {
             if(res){
             console.log("Bio updated"); 

@@ -65,7 +65,7 @@ const ResultPage = (props) => {
     //This should give back an array of questions
     //If it was backend driven then it would be easy to implement extra search parameters like tags. Title. Description...
     axios
-      .get("http://localhost:5000/api/search/" + getSearchText.toLowerCase())
+      .get("/api/search/" + getSearchText.toLowerCase())
       .then((res) => {
         let questionData = res.data;
         //Why is this process being done on the frontend

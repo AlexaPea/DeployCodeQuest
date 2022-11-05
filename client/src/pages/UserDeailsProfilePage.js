@@ -81,7 +81,7 @@ const UserDeailsProfilePage = () => {
         }
 
         //get user information 
-        Axios.get('http://localhost:5000/api/userInfo/' + userProfileId)
+        Axios.get('/api/userInfo/' + userProfileId)
         .then((res) => {
             console.log(res.data);
 
@@ -93,7 +93,7 @@ const UserDeailsProfilePage = () => {
     }, []);
 
     useEffect(() => { 
-        Axios.get("http://localhost:5000/api/readbio")
+        Axios.get("/api/readbio")
         .then((res) => {
             let data = res.data;
 
@@ -252,7 +252,7 @@ const UserDeailsProfilePage = () => {
 
     useEffect(() => {
 
-        Axios.get('http://localhost:5000/api/readquestions')
+        Axios.get('/api/readquestions')
         .then(res => {
 
             let questionData = res.data;
@@ -281,7 +281,7 @@ const UserDeailsProfilePage = () => {
         })
         .catch(err => console.log(err));
 
-        Axios.get('http://localhost:5000/api/readAllAnswers')
+        Axios.get('/api/readAllAnswers')
         .then(res => {
 
             let answerData = res.data;
@@ -331,7 +331,7 @@ const UserDeailsProfilePage = () => {
                 rank: "Silver"
             }
 
-            Axios.patch('http://localhost:5000/api/updateuser/:id' + userProfileId, payload)
+            Axios.patch('/api/updateuser/:id' + userProfileId, payload)
             .then((res) => {
                 if (res) {
                     console.log("User Updated");
@@ -358,7 +358,7 @@ const UserDeailsProfilePage = () => {
                 rank: "Gold"
             }
 
-            Axios.patch('http://localhost:5000/api/updateuser/:id' + userProfileId, payload)
+            Axios.patch('/api/updateuser/:id' + userProfileId, payload)
             .then((res) => {
                 if (res) {
                     console.log("User Updated");
@@ -387,7 +387,7 @@ const UserDeailsProfilePage = () => {
                 rank: "Platinum"
             }
 
-            Axios.patch('http://localhost:5000/api/updateuser/:id' + userProfileId, payload)
+            Axios.patch('/api/updateuser/:id' + userProfileId, payload)
             .then((res) => {
                 if (res) {
                     console.log("User Updated");
@@ -412,13 +412,13 @@ const UserDeailsProfilePage = () => {
             badgeDiamondCheck = true;
         }
 
-        Axios.get("http://localhost:5000/api/userInfo/" + userProfileId).then((res) => {
+        Axios.get("/api/userInfo/" + userProfileId).then((res) => {
             let data = res.data;
             setUsersRank(data.rank);
             setUserEmail(data.email);
         });
 
-        Axios.get('http://localhost:5000/api/getadminreq')
+        Axios.get('/api/getadminreq')
             .then(res => {
                 let data = res.data;
 
@@ -448,7 +448,7 @@ const UserDeailsProfilePage = () => {
                 rank: "Diamond"
             }
 
-            Axios.patch('http://localhost:5000/api/updateuser/:id' + userProfileId, payload)
+            Axios.patch('/api/updateuser/:id' + userProfileId, payload)
             .then((res) => {
                 if (res) {
                     console.log("User Updated");

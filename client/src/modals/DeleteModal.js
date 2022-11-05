@@ -14,7 +14,7 @@ const DeleteModal = (props) => {
 
         console.log(props.questionId)
 
-        Axios.delete('http://localhost:5000/api/deletequestion/' + props.questionId)
+        Axios.delete('/api/deletequestion/' + props.questionId)
             .then((res) => {
                 if (res) {
                     // props.render(true);

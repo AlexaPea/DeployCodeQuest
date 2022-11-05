@@ -30,7 +30,7 @@ const AddBioModal = (props) => {
 
         console.log(payload);
 
-        Axios.post('http://localhost:5000/api/addbio', payload)
+        Axios.post('/api/addbio', payload)
         .then((res)=> {
             if(res){
             console.log("User bio has successfully been added");

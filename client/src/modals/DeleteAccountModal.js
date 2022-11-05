@@ -22,7 +22,7 @@ const DeleteAccountModal = (props) => {
       const deleteAccount = () => {
         // console.log(id);
 
-        Axios.get('http://localhost:5000/api/userInfo/' + activeUser)
+        Axios.get('/api/userInfo/' + activeUser)
             .then(res => {
                 let userData = res.data;
                 // console.log(userData._id);
@@ -30,7 +30,7 @@ const DeleteAccountModal = (props) => {
 
             
                     if (activeUser === userData._id) {
-                        Axios.delete('http://localhost:5000/api/deleteaccount/' + activeUser)
+                        Axios.delete('/api/deleteaccount/' + activeUser)
                             .then((res) => {
                                 if (res) {
                                     navigate('/');

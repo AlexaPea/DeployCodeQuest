@@ -49,7 +49,7 @@ const updateUserInfo = (e) => {
 
         let userId = props.userId;
     
-        Axios.patch('http://localhost:5000/api/updateUser', payload)
+        Axios.patch('/api/updateUser', payload)
         .then((res)=> {
             if(res){
             console.log("User Successfully Updated");

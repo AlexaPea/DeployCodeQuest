@@ -15,7 +15,7 @@ const DeleteAnswerModal = (props) => {
     const deleteUserFunction = () => {
 
         console.log("This is a answer");
-        Axios.delete('http://localhost:5000/api/deleteAnswer/' + props.id)
+        Axios.delete('/api/deleteAnswer/' + props.id)
             .then((res) => {
                 console.log("Answer Deleted");
                 closeModal();

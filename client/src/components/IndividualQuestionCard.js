@@ -27,7 +27,7 @@ export const IndividualQuestionCard = (props) => {
   let screenshots = [];
 
   for (let i = 0; i < qScreenshots.length; i++) {
-    let URLs = 'http://localhost:5000/questionScreenshots/' + qScreenshots[i].filename;
+    let URLs = '/questionScreenshots/' + qScreenshots[i].filename;
     screenshots.push(URLs);
   }
 
@@ -59,7 +59,7 @@ export const IndividualQuestionCard = (props) => {
   const [flagState, setFlagState] = useState(false)
   const userId = sessionStorage.getItem("id");
   useEffect(() => {
-    axios.get('http://localhost:5000/api/reportedPost/' + props?.questionId + "/" + userId)
+    axios.get('/api/reportedPost/' + props?.questionId + "/" + userId)
       .then(res => {
         let data = res.data;
         console.log(data);
@@ -81,7 +81,7 @@ export const IndividualQuestionCard = (props) => {
   const [category, setCategory] = useState('');
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/readvote')
+    axios.get('/api/readvote')
       .then(res => {
         let data = res.data;
         console.log(data);
@@ -352,7 +352,7 @@ export const IndividualQuestionCard = (props) => {
       questionId: props.questionId
     }
 
-    axios.post('http://localhost:5000/api/addvote', payloadData)
+    axios.post('/api/addvote', payloadData)
       .then((res) => {
         if (res) {
           // console.log("Vote Added"); 
@@ -380,7 +380,7 @@ export const IndividualQuestionCard = (props) => {
     }
     // console.log(payloadData);
 
-    axios.post('http://localhost:5000/api/addvote', payloadData)
+    axios.post('/api/addvote', payloadData)
       .then((res) => {
         if (res) {
           console.log("Vote Added");
@@ -419,7 +419,7 @@ export const IndividualQuestionCard = (props) => {
 
     } else {
       console.log("user logged in")
-      axios.get('http://localhost:5000/api/userInfo/' + props.userId)
+      axios.get('/api/userInfo/' + props.userId)
         .then(res => {
           let data = res.data;
           if(data === null){

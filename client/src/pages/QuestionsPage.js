@@ -79,7 +79,7 @@ const QuestionsPage = () => {
 
     if (tag == "" && dateOrder == "") {
       axios
-        .get("http://localhost:5000/api/readquestions")
+        .get("/api/readquestions")
         .then((res) => {
           let questionData = res.data;
           let renderQuestions = questionData.map((item) => (
@@ -102,7 +102,7 @@ const QuestionsPage = () => {
     } else if (tag != "") {
       console.log(tag)
       axios
-        .get("http://localhost:5000/api/questiontag/" + tag)
+        .get("/api/questiontag/" + tag)
         .then((res) => {
           let questionData = res.data;
           console.log(questionData)
@@ -137,7 +137,7 @@ const QuestionsPage = () => {
 
     if (dateOrder != "" && tag == "") {
       axios
-        .get("http://localhost:5000/api/readquestions")
+        .get("/api/readquestions")
         .then((res) => {
           let questionData = res.data;
 
@@ -185,7 +185,7 @@ useEffect(()=>{
     navigate('/');
     sessionStorage.clear();
   }else{
-    axios.post('http://localhost:5000/api/verifytoken', verifyUser)
+    axios.post('/api/verifytoken', verifyUser)
     .then(res =>{
       console.log(res.data);
       if(res.data.verified === false){

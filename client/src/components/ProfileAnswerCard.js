@@ -40,7 +40,7 @@ import DeleteAnswerModal from '../modals/DeleteAnswerModal';
     const [category, setCategory] = useState('');
 
     useEffect(() => {
-        axios.get('http://localhost:5000/api/readanswervote')
+        axios.get('/api/readanswervote')
             .then(res => {
                 let data = res.data;
                 // console.log(data);
@@ -314,7 +314,7 @@ import DeleteAnswerModal from '../modals/DeleteAnswerModal';
             answerId: props.questionId
         }
 
-        axios.post('http://localhost:5000/api/addanswervote', payloadData)
+        axios.post('/api/addanswervote', payloadData)
             .then((res) => {
                 if (res) {
                     // console.log("Vote Added"); 
@@ -343,7 +343,7 @@ import DeleteAnswerModal from '../modals/DeleteAnswerModal';
         }
         console.log(payloadData);
 
-        axios.post('http://localhost:5000/api/addanswervote', payloadData)
+        axios.post('/api/addanswervote', payloadData)
             .then((res) => {
                 if (res) {
                     console.log("Vote Added");
@@ -379,7 +379,7 @@ import DeleteAnswerModal from '../modals/DeleteAnswerModal';
     let screenshots = [];
 
     for (let i = 0; i < aScreenshots.length; i++) {
-        let URLs = 'http://localhost:5000/answerScreenshots/' + aScreenshots[i].filename;
+        let URLs = '/answerScreenshots/' + aScreenshots[i].filename;
         screenshots.push(URLs);
     }
 
@@ -392,7 +392,7 @@ import DeleteAnswerModal from '../modals/DeleteAnswerModal';
         } else {
             //   console.log("user logged in");
             axios
-                .get("http://localhost:5000/api/userInfo/" + props.userId)
+                .get("/api/userInfo/" + props.userId)
                 .then((res) => {
                     let data = res.data;
                     setUsername(data.username);

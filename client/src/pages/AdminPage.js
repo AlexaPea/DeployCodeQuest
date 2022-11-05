@@ -56,7 +56,7 @@ const AdminPage = (props) => {
     const [totalReportedUsers, setTotalReportedUsers] = useState();
 
     useEffect(() => {
-        Axios.get('http://localhost:5000/api/getUser')
+        Axios.get('/api/getUser')
             .then(res => {
                 // getting all the isers in. then count them, with it, capture some data , the ids, the names, emails.
                 setTotalUsers(res.data.length)
@@ -67,7 +67,7 @@ const AdminPage = (props) => {
                 setAllTotalUsers(allUsers);
             });
 
-        Axios.get('http://localhost:5000/api/allReportedUsers')
+        Axios.get('/api/allReportedUsers')
             .then(res => {
                 // getting all the isers in. then count them, with it, capture some data , the ids, the names, emails.
                 setTotalReportedUsers(res.data.length)
@@ -84,7 +84,7 @@ const AdminPage = (props) => {
                 // al die users wat reported is
                 let allReportedUsers = new Array()
                 for (let i = 0; i < reportedUserIds.length; i++) {
-                    Axios.get('http://localhost:5000/api/userInfo/' + reportedUserIds[i]).then(res => {
+                    Axios.get('/api/userInfo/' + reportedUserIds[i]).then(res => {
                         allReportedUsers.push(res.data);
                         let reportedUsersofCQ = allReportedUsers.map((reporteds) => <ReportedUserCard key={reporteds._id} username={reporteds.username} email={reporteds.email} />)
                         // Check IF - dubbels in die nuwe array of nie? 
@@ -129,7 +129,7 @@ useEffect(()=>{
       navigate('/');
       sessionStorage.clear();
     }else{
-      Axios.post('http://localhost:5000/api/verifytoken', verifyUser)
+      Axios.post('/api/verifytoken', verifyUser)
       .then(res =>{
         console.log(res.data);
         if(res.data.verified === false){

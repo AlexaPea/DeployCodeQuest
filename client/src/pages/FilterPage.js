@@ -101,7 +101,7 @@ const ResultPage = (props) => {
   }
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/readquestions")
+      .get("/api/readquestions")
       .then((res) => {
         let questionData = res.data;
         let idArray = [];

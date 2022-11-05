@@ -37,7 +37,7 @@ const QuestionCardProfile = (props) => {
     const [flagState, setFlagState] = useState(false)
     const userId = sessionStorage.getItem("id");
     useEffect(() => {
-        axios.get('http://localhost:5000/api/reportedPost/' + props?.questionId + "/" + userId)
+        axios.get('/api/reportedPost/' + props?.questionId + "/" + userId)
             .then(res => {
                 let data = res.data;
                 console.log(data);
@@ -53,7 +53,7 @@ const QuestionCardProfile = (props) => {
     const [answersLength, setAnswersLength] = useState(0)
 
     useEffect(() => {
-        axios.get('http://localhost:5000/api/readQuestionAnswerAmount/' + props?.questionId)
+        axios.get('/api/readQuestionAnswerAmount/' + props?.questionId)
             .then(res => {
                 let data = res.data;
                 console.log(data);
@@ -73,7 +73,7 @@ const QuestionCardProfile = (props) => {
     const [category, setCategory] = useState('');
 
     useEffect(() => {
-        axios.get('http://localhost:5000/api/readvote')
+        axios.get('/api/readvote')
             .then(res => {
                 let data = res.data;
                 //  console.log(data);
@@ -177,7 +177,7 @@ const QuestionCardProfile = (props) => {
 
         } else {
             console.log("user logged in")
-            axios.get('http://localhost:5000/api/userInfo/' + props.userId)
+            axios.get('/api/userInfo/' + props.userId)
                 .then(res => {
                     let data = res.data;
                     setUsername(data.username);

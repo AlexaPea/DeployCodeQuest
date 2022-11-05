@@ -148,7 +148,7 @@ const addNewUser = (e) => {
 
     // console.log(payload);
 
-    Axios.post('http://localhost:5000/api/adduser', payload)
+    Axios.post('/api/adduser', payload)
     .then((res)=> {
         if(res){
         console.log("User Successfully Added");
@@ -199,17 +199,7 @@ console.log(userId);
     // }
 
 
-    // Axios.post('http://localhost:5000/api/userAwardModals', awardModals)
-    //     .then((res) => {
-    //         if (res) {
-    //             console.log("Users Award Modals Set");
-    //         }
-    //     })
-    //     .catch(function (error) {
-    //         console.log(error);
-    //     });
-
-        // ================================================================================
+    
 
 
 

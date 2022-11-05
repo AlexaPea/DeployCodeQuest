@@ -66,7 +66,7 @@ useEffect(()=>{
           navigate('/');
           sessionStorage.clear();
         }else{
-          axios.post('http://localhost:5000/api/verifytoken', verifyUser)
+          axios.post('/api/verifytoken', verifyUser)
           .then(res =>{
             console.log(res.data);
             if(res.data.verified === false){
@@ -80,7 +80,7 @@ useEffect(()=>{
         
         
 
-  axios.get('http://localhost:5000/api/readquestions')
+  axios.get('/api/readquestions')
   .then(res =>{
 
     let questionData = res.data;

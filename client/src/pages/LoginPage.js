@@ -123,7 +123,7 @@ const loginUser = (e) => {
 
   console.log(payload);
 
-  Axios.post('http://localhost:5000/api/loginUser', payload)
+  Axios.post('/api/loginUser', payload)
   .then((res) => {
     console.log(res.data);
  let string = res.data;

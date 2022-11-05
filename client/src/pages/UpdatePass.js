@@ -54,7 +54,7 @@ const sendPassReset = (e) => {
     }
     console.log(payload);
 
-    axios.post('http://localhost:5000/api/resetpass', payload)
+    axios.post('/api/resetpass', payload)
     .then((res)=> {
       if(res){
         console.log(res.data); 

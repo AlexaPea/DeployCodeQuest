@@ -52,7 +52,7 @@ export default function NewAllUsersTable() {
         />)
     }
     useEffect(() => {
-        Axios.get('http://localhost:5000/api/getUser')
+        Axios.get('/api/getUser')
             .then(res => {
                 let allUsers = res.data;
                 for (let i = 0; i < allUsers.length; i++) {

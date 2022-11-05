@@ -263,7 +263,7 @@ const ProfilePage = () => {
 
 
     useEffect(()=> {
-        Axios.get('http://localhost:5000/api/readquestions')
+        Axios.get('/api/readquestions')
         .then(res => {
 
             let questionData = res.data;
@@ -297,7 +297,7 @@ const ProfilePage = () => {
         })
         .catch(err => console.log(err));
 
-    Axios.get('http://localhost:5000/api/readAllAnswers')
+    Axios.get('/api/readAllAnswers')
         .then(res => {
 
             let answerData = res.data;
@@ -356,7 +356,7 @@ const ProfilePage = () => {
             }
 
 
-            Axios.patch('http://localhost:5000/api/updateuser/:id' + activeUser, payload)
+            Axios.patch('/api/updateuser/:id' + activeUser, payload)
                 .then((res) => {
                     if (res) {
                         console.log("User Updated");
@@ -386,7 +386,7 @@ const ProfilePage = () => {
             }
 
 
-            Axios.patch('http://localhost:5000/api/updateuser/:id' + activeUser, payload)
+            Axios.patch('/api/updateuser/:id' + activeUser, payload)
                 .then((res) => {
                     if (res) {
                         console.log("User Updated");
@@ -418,7 +418,7 @@ const ProfilePage = () => {
             }
 
 
-            Axios.patch('http://localhost:5000/api/updateuser/:id' + activeUser, payload)
+            Axios.patch('/api/updateuser/:id' + activeUser, payload)
                 .then((res) => {
                     if (res) {
                         console.log("User Updated");
@@ -446,7 +446,7 @@ const ProfilePage = () => {
         }
 
 
-        Axios.get("http://localhost:5000/api/userInfo/" + activeUser).then((res) => {
+        Axios.get("/api/userInfo/" + activeUser).then((res) => {
             let data = res.data;
             setUsersRank(data.rank);
             setUserEmail(data.email);
@@ -457,7 +457,7 @@ const ProfilePage = () => {
 
 
 
-        Axios.get('http://localhost:5000/api/getadminreq')
+        Axios.get('/api/getadminreq')
             .then(res => {
                 let data = res.data;
 
@@ -554,7 +554,7 @@ const ProfilePage = () => {
             }
 
 
-            Axios.patch('http://localhost:5000/api/updateuser/:id' + activeUser, payload)
+            Axios.patch('/api/updateuser/:id' + activeUser, payload)
                 .then((res) => {
                     if (res) {
                         console.log("User Updated");
@@ -687,7 +687,7 @@ const ProfilePage = () => {
             }
 
 
-            Axios.post('http://localhost:5000/api/adminreq', adminPermissions)
+            Axios.post('/api/adminreq', adminPermissions)
                 .then((res) => {
                     if (res) {
                         console.log("Added Admin Request");
@@ -753,7 +753,7 @@ const ProfilePage = () => {
           navigate('/');
           sessionStorage.clear();
         }else{
-          Axios.post('http://localhost:5000/api/verifytoken', verifyUser)
+          Axios.post('/api/verifytoken', verifyUser)
           .then(res =>{
             console.log(res.data);
             if(res.data.verified === false){

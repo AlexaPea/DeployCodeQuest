@@ -66,7 +66,7 @@ const FlaggedAnswers = () => {
     }
 
     useEffect(() => {
-        Axios.get('http://localhost:5000/api/reportedAnswer/')
+        Axios.get('/api/reportedAnswer/')
             .then(res => {
                 let data = res.data.answers
                 // console.log(res.data);
@@ -77,7 +77,7 @@ const FlaggedAnswers = () => {
                 for (let i = 0; i < data.length; i++) {
                     let reportedQuestion = data[i];
                     // console.log(reportedQuestion._id);
-                    Axios.get('http://localhost:5000/api/reportedQuestionAnswer/' + reportedQuestion._id).then(res1 => {
+                    Axios.get('/api/reportedQuestionAnswer/' + reportedQuestion._id).then(res1 => {
                         let loopData = data[i]
 
                         let data1 = res1.data.finduser[0]

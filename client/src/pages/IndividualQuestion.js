@@ -31,7 +31,7 @@ const IndividualQuestion = () => {
   const [updateQuestions, setUpdateQuestions] = useState();
 
   useEffect(() => {
-    Axios.get("http://localhost:5000/api/readquestions")
+    Axios.get("/api/readquestions")
       .then((res) => {
         let questionData = res.data;
         let renderQuestions = questionData.map((item) => {
@@ -72,7 +72,7 @@ const IndividualQuestion = () => {
   const [updateAnswers, setUpdateAnswers] = useState();
 
   useEffect(() => {
-    Axios.get("http://localhost:5000/api/readQuestionAnswer/" + sessionStorage.getItem("questionId"))
+    Axios.get("/api/readQuestionAnswer/" + sessionStorage.getItem("questionId"))
       .then((res) => {
         let filterAnswer = [];
         let questionData = res.data;
@@ -258,7 +258,7 @@ const IndividualQuestion = () => {
     }
 
     // send payload to database
-    Axios.post("http://localhost:5000/api/addanswer", payloadData)
+    Axios.post("/api/addanswer", payloadData)
       .then((res) => {
         if (res) {
           //show post confirmation modal

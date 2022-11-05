@@ -57,7 +57,7 @@ export default function PromotionRequestsTableView() {
 
     useEffect(() => {
         setRows([])
-        Axios.get('http://localhost:5000/api/getadminreq')
+        Axios.get('/api/getadminreq')
             .then(res => {
 
 
@@ -66,7 +66,7 @@ export default function PromotionRequestsTableView() {
 
 
                 for (let i = 0; i < data.length; i++) {
-                    Axios.get('http://localhost:5000/api/userInfo/' + data[i].userId)
+                    Axios.get('/api/userInfo/' + data[i].userId)
                         .then(res1 => {
 
                             console.log(res1.data)

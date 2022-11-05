@@ -67,7 +67,7 @@ export default function NewReportedUserTable() {
     const [reportedUsers, setReportedUsers] = useState();
 
     useEffect(() => {
-        Axios.get('http://localhost:5000/api/allReportedUsers')
+        Axios.get('/api/allReportedUsers')
             .then(res1 => {
                 // getting all the isers in. then count them, with it, capture some data , the ids, the names, emails.
                 // setTotalReportedUsers(res1.data.reportedUsers.length)
@@ -95,7 +95,7 @@ export default function NewReportedUserTable() {
 
 
                 for (let i = 0; i < reportedUserIds.length; i++) {
-                    Axios.get('http://localhost:5000/api/userInfo/' + reportedUserIds[i]).then(res => {
+                    Axios.get('/api/userInfo/' + reportedUserIds[i]).then(res => {
 
                         // console.log(res.data);
                         let reportedUser = res.data;

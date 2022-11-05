@@ -48,7 +48,7 @@ export const AnswerCard = (props) => {
     const [category, setCategory] = useState('');
 
     useEffect(() => {
-        axios.get('http://localhost:5000/api/readanswervote')
+        axios.get('/api/readanswervote')
             .then(res => {
                 let data = res.data;
                 // console.log(data);
@@ -320,7 +320,7 @@ export const AnswerCard = (props) => {
             answerId: answerId
         }
 
-        axios.post('http://localhost:5000/api/addanswervote', payloadData)
+        axios.post('/api/addanswervote', payloadData)
             .then((res) => {
                 if (res) {
                     // console.log("Vote Added"); 
@@ -353,7 +353,7 @@ export const AnswerCard = (props) => {
         }
         console.log(payloadData);
 
-        axios.post('http://localhost:5000/api/addanswervote', payloadData)
+        axios.post('/api/addanswervote', payloadData)
             .then((res) => {
                 if (res) {
                     console.log("Vote Added");
@@ -389,7 +389,7 @@ export const AnswerCard = (props) => {
     let screenshots = [];
 
     for (let i = 0; i < aScreenshots.length; i++) {
-        let URLs = 'http://localhost:5000/answerScreenshots/' + aScreenshots[i].filename;
+        let URLs = '/answerScreenshots/' + aScreenshots[i].filename;
         screenshots.push(URLs);
     }
 
@@ -402,7 +402,7 @@ export const AnswerCard = (props) => {
         } else {
             //   console.log("user logged in");
             axios
-                .get("http://localhost:5000/api/userInfo/" + props.userId)
+                .get("/api/userInfo/" + props.userId)
                 .then((res) => {
                     let data = res.data;
                     if(data === null){
@@ -445,7 +445,7 @@ export const AnswerCard = (props) => {
         setFlagModal(<FlagModal close={setFlagModal} id={props.id} questionId={props.answerId} userId={props.userId} />)
     }
     useEffect(() => {
-        axios.get('http://localhost:5000/api/reportedPost/' + props.answerId)
+        axios.get('/api/reportedPost/' + props.answerId)
             .then(res => {
                 let data = res.data;
                 console.log(data);

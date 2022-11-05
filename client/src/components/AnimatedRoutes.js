@@ -48,7 +48,7 @@ function AnimatedRoutes() {
 
     } else {
       //   console.log("user logged in")
-      Axios.get('http://localhost:5000/api/userInfo/' + userId)
+      Axios.get('/api/userInfo/' + userId)
         .then(res => {
           let data = res.data;
 

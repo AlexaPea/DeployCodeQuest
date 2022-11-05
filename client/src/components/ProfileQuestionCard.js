@@ -24,7 +24,7 @@ const ProfileQuestionCard = (props) => {
     const [answersLength, setAnswersLength] = useState(0)
 
     useEffect(() => {
-        axios.get('http://localhost:5000/api/readQuestionAnswerAmount/' + props?.questionId)
+        axios.get('/api/readQuestionAnswerAmount/' + props?.questionId)
             .then(res => {
                 let data = res.data;
                 console.log(data);
@@ -44,7 +44,7 @@ const ProfileQuestionCard = (props) => {
     const [category, setCategory] = useState('');
 
     useEffect(() => {
-        axios.get('http://localhost:5000/api/readvote')
+        axios.get('/api/readvote')
             .then(res => {
                 let data = res.data;
                 //  console.log(data);
@@ -317,7 +317,7 @@ const ProfileQuestionCard = (props) => {
             questionId: props.questionId
         }
 
-        axios.post('http://localhost:5000/api/addvote', payloadData)
+        axios.post('/api/addvote', payloadData)
             .then((res) => {
                 if (res) {
                     // console.log("Vote Added"); 
@@ -345,7 +345,7 @@ const ProfileQuestionCard = (props) => {
         }
         // console.log(payloadData);
 
-        axios.post('http://localhost:5000/api/addvote', payloadData)
+        axios.post('/api/addvote', payloadData)
             .then((res) => {
                 if (res) {
                     console.log("Vote Added");
@@ -384,7 +384,7 @@ const ProfileQuestionCard = (props) => {
 
         } else {
             console.log("user logged in")
-            axios.get('http://localhost:5000/api/userInfo/' + props.userId)
+            axios.get('/api/userInfo/' + props.userId)
                 .then(res => {
                     let data = res.data;
                     setUsername(data.username);

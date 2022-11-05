@@ -59,7 +59,7 @@ const sendPassReset = (e) => {
       confirmPass: formValues['confirmPass']
   }
 
-  axios.patch('http://localhost:5000/api/updatepass/' + searchParams.get('id'), payload)
+  axios.patch('/api/updatepass/' + searchParams.get('id'), payload)
   .then((res)=>{
     console.log(res.data);
 

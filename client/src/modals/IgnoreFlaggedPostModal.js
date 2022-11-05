@@ -12,7 +12,7 @@ const IgnorePostModal = (props) => {
     const ignoreFlagUserFunction = () => {
 
         console.log("This is a post");
-        Axios.delete('http://localhost:5000/api/ignoreReportedPost/' + props.id)
+        Axios.delete('/api/ignoreReportedPost/' + props.id)
             .then(res => {
                 // console.log("user has been removed from flagged list");
                 closeModal();

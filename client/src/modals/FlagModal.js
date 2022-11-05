@@ -28,7 +28,7 @@ const FlagModal = (props) => {
         }
         payloadData = JSON.stringify(payload);
 
-        Axios.post('http://localhost:5000/api/addReportedUser', payload)
+        Axios.post('/api/addReportedUser', payload)
             .then((res) => {
                 if (res) {
                     closeModal()

@@ -170,7 +170,7 @@ const NewQuestionPage = () => {
         }
 
         // send payload to database
-        Axios.post('http://localhost:5000/api/newquestion', payloadData)
+        Axios.post('/api/newquestion', payloadData)
         .then((res)=> {
           if(res){
             //show post confirmation modal 

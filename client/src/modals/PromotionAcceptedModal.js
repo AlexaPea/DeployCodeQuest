@@ -22,7 +22,7 @@ const PromotionAccepted = (props) => {
 
 
         console.log(payload);
-        Axios.patch('http://localhost:5000/api/adminreqauth/' + props.id, payload)
+        Axios.patch('/api/adminreqauth/' + props.id, payload)
             .then(res => {
                 // console.log("user has been removed from flagged list");
                 closeModal();

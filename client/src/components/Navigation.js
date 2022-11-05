@@ -138,7 +138,7 @@ const Navigation = ({ questions, setUpdateQuestions }) => {
       // console.log("User not logged in");
     } else {
       // console.log("user logged in");
-      Axios.get("http://localhost:5000/api/userInfo/" + userId).then((res) => {
+      Axios.get("/api/userInfo/" + userId).then((res) => {
         let data = res.data;
         setUsername(data.username);
         setRank(data.rank);
@@ -170,7 +170,7 @@ const Navigation = ({ questions, setUpdateQuestions }) => {
   const [editModal, setEditModal] = useState();
   const [postConfirmation, setSearchResult] = useState();
   const doSomeStuff = () => {
-    Axios.get("http://localhost:5000/api/readquestions").then((res) => {
+    Axios.get("/api/readquestions").then((res) => {
       let questionData = res.data;
 
       let a = questionData.filter((items) => items.title == "Test");
