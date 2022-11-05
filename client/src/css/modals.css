@@ -1,0 +1,158 @@
+.pop-up{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.72);
+    position:fixed;
+    z-index: 999999;
+    top: 0;
+    left: 0; 
+  }
+
+  .modal{
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #f1f1f1;
+    width: 350px;
+    height: fit-content;
+    padding-left: 5px;
+    padding: 25px;
+    border-radius: 30px;
+    text-align: center;
+    color: #2b2b2b;
+  }
+
+  .modal.questionAdded{
+    height: 430px;
+  }
+
+  .modal.deleteAccount{
+    margin-top: 60px;
+    height: 560px;
+    width: 370px;
+  }
+
+  .modal img{
+    width: 190px;
+    margin-top: 20px;
+  }
+
+  .modal h1{
+    margin-bottom: 0px;
+    margin-top: 15px;
+    color: #2b2b2b;
+  }
+
+  .modal h4{
+    font-weight: 400;
+    width: 300px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+
+  .close{
+    margin-left: 300px;
+    margin-top: 15px;
+    position: absolute;
+    cursor: pointer;
+
+  }
+
+  .modal-img.delete img{
+    width: 300px;
+  }
+  
+  .modal-img.logOut img{
+    width: 260px;
+  }
+
+  .modal.questionAdded.answer{
+    height: 465px;
+  }
+
+  .modal.questionAdded.answer img{
+    width: 250px;
+    margin-bottom: 0;
+    margin-top: 0px;
+  }
+
+
+  .pop-up.delete{
+    position:fixed;
+  }
+
+  .modal.resetLogin{
+    height:450px;
+  }
+  .modal.resetLogin img{
+    height:220px;
+    width: auto;
+  }
+
+  .pop-up.ProfileQuestionDelete{
+    position:absolute;
+    z-index: 999999999;
+    top:0;
+  }
+  .pop-up.deleteFlagged{
+    position:fixed;
+    z-index: 999999999;
+    top:0;
+  }
+
+
+  .pop-up.deleteQuestion{
+    top:0;
+    left:0;
+    position:fixed !important;
+    z-index: 999999999999999999 !important;
+
+  }
+
+
+
+  .pop-up.updateUser .modal{
+      margin-top: 150px;
+      height: 340px;
+  }
+
+  .Dp.Styling{
+    margin-left: 50px;
+    margin-top: 15px;
+  }
+
+.deleteQProfile{
+  
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #f1f1f1;
+  width: 350px;
+  height: fit-content;
+  padding-left: 5px;
+  padding: 25px;
+  border-radius: 30px;
+  text-align: center;
+  color: #2b2b2b;
+  }
+
+  .deleteQuestionPop{
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0,0,0,0.72); */
+    z-index: 5;
+    top:0;
+    /* position: absolute; */
+    margin: 0 auto;
+
+  }
+
+  .deleteQuestionPop h1{
+    margin: 0;
+  }

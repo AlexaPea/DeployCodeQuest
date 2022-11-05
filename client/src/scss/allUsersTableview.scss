@@ -1,0 +1,63 @@
+.profileBackground {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px !important;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+}
+
+.profile-imgage {
+    height: 30px;
+    width: 30px;
+    display: grid;
+    align-self: center;
+    padding-left: 8px;
+}
+
+.css-1ex1afd-MuiTableCell-root {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 1.43;
+    letter-spacing: 0.01071em;
+    display: table-cell;
+    vertical-align: inherit;
+    border-bottom: 1pxsolidrgba(224, 224, 224, 1);
+    text-align: left;
+    padding: 16px;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.css-1ex1afd-MuiTableCell-root {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 1.43;
+    letter-spacing: 0 !important;
+    display: table-cell;
+    vertical-align: inherit;
+    border-bottom: 1px solid (rgba) 224, 224, 224, 1;
+    text-align: left !important;
+    padding-right: 8px !important;
+    padding-left: 16px !important;
+    width: 100vh !important;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 10px !important;
+}
+
+.MuiTableBody-root css-apqrd9-MuiTableBody-root {
+    height: 70px !important;
+}
+
+// .MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-1ps6pg7-MuiPaper-root {
+//     margin-left: 0px !important;
+// }
+.MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-1ps6pg7-MuiPaper-root {
+    margin-left: 0px !important;
+}
+
+.css-78c6dr-MuiToolbar-root-MuiTablePagination-toolbar {
+    min-height: 52px;
+    padding-right: 64px !important;
+}

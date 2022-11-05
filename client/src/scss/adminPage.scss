@@ -1,0 +1,170 @@
+.admin {
+    display: grid;
+    background-color: #F1F1FC;
+    border-radius: 20px;
+    position: absolute;
+    // width: 100%;
+    height: 58vh;
+    left: 20%;
+    top: 12%;
+    box-shadow: 0px 0px 15px -6px rgba(0, 0, 0, 0.59);
+    -webkit-box-shadow: 0px 0px 15px -6px rgba(0, 0, 0, 0.59);
+    -moz-box-shadow: 0px 0px 15px -6px rgba(0, 0, 0, 0.59);
+    overflow-x: hidden;
+    padding-bottom: 10%;
+    -ms-overflow-style: none;
+    scrollbar-width: 0px !important;
+    // overflow-y: scroll;
+    overflow-y: auto;
+
+
+    &::-webkit-scrollbar {
+        display: none !important;
+    }
+
+
+    &__top__header {
+        width: 100%;
+        height: 330px;
+        background-color: #2b2b2b;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        display: grid;
+        grid-template-columns: 600px 500px;
+
+        grid-gap: 40px;
+        top: 60%;
+        left: 6%;
+
+
+
+        &__heyboss {
+            width: 78%;
+            height: 100px;
+            padding-left: 40px;
+            grid-template-columns: 20% 20% 60%;
+            color: #ffffff;
+            margin-left: 10px;
+            margin-top: 60px;
+
+            &__h1 {
+                font-family: 'Open Sans';
+                text-align: left;
+                font-size: 30px;
+                color: #ffffff;
+                display: grid;
+            }
+
+            &__p {
+                color: #ffffff;
+                font-family: 'Open Sans';
+                display: grid;
+            }
+
+            &__maincatimage img {
+                display: grid;
+            }
+        }
+    }
+
+    &__links {
+        display: grid;
+        text-decoration: none;
+        height: 300px;
+        overflow-y: scroll;
+        grid-template-columns: auto;
+        margin-right: 8px;
+
+        // grid-template-columns: auto;
+        &__card {
+            display: grid;
+            padding: 8px;
+            margin-left: 16px;
+            overflow-y: scroll !important;
+            // margin-right: 8px;
+        }
+
+        &__tablinks {
+            display: grid;
+            text-decoration: none;
+
+
+        }
+    }
+
+    // Table view layout css here
+    .css-13xfq8m-MuiTabPanel-root {
+        padding: 0px !important;
+        width: 94% !important;
+        margin-left: 10px !important;
+        margin-top: 4px !important;
+        border-radius: 20px !important;
+    }
+
+    .admin .css-1gsv261 {
+        border-bottom: 0px solid !important;
+        border-color: rgba(0, 0, 0, 0) !important;
+        margin-bottom: -134px;
+        padding-bottom: 8px;
+    }
+
+    &__flagged__and__bad {
+        display: grid;
+        height: auto;
+        padding: 8px;
+
+        &__tabs {
+            display: grid;
+            text-decoration: none;
+            height: 300px;
+            // overflow-y: scroll;
+
+            &__tablinks {
+                display: grid;
+                text-decoration: none;
+            }
+
+            &__tabpanel {
+                display: grid;
+                text-decoration: none;
+                width: 100%;
+                border-radius: 20px;
+                // overflow-y: scroll !important;
+
+
+            }
+        }
+
+
+
+    }
+
+    .css-1aquho2-MuiTabs-indicator {
+        position: absolute;
+        height: 2px;
+        bottom: 0;
+        width: 100%;
+        -webkit-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        background-color: #FF7900;
+    }
+
+    .css-1aquho2-MuiTabs-indicator {
+
+        height: 2px;
+        bottom: 0;
+        width: 100%;
+        -webkit-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        background-color: #FF7900;
+    }
+
+    .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+        color: #2b2b2b;
+    }
+
+    .css-1gsv261 {
+        border-bottom: 0px solid !important;
+        border-color: rgba(0, 0, 0, 0) !important;
+    }
+}
